@@ -23,7 +23,7 @@ const signup = () => {
     }
   };
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-200">
+    <div className="flex items-center justify-center min-h-screen bg-cover  bg-[url('https://www.voicesofruralindia.org/wp-content/uploads/2020/11/ylswjsy7stw-1140x668.jpg')] ">
       <div className="p-8  w-90 bg-white rounded">
         <h2 className="text-3xl font-bold mb-4 text-black ">Sign Up</h2>
         <form onSubmit={handleSubmit}>

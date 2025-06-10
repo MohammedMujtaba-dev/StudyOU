@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import Courses from "./pages/courses";
+import Notes from "./pages/notes";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Login from "./pages/login";
@@ -13,7 +13,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/notes" element={<Notes />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />

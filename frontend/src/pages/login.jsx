@@ -23,7 +23,7 @@ const login = () => {
     }
   };
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-200">
+    <div className="flex items-center justify-center min-h-screen bg-cover bg-[url('https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?cs=srgb&dl=pexels-ivo-rainha-527110-1290141.jpg&fm=jpg')]">
       <div className="p-8  w-90 bg-white rounded">
         <h2 className="text-3xl font-bold mb-4 text-black ">Login</h2>
         <form onSubmit={handleSubmit}>

@@ -12,7 +12,13 @@ const home = () => {
       />
       <div className="relative z-20 flex flex-col items-center justify-center text-center text-white h-full px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Welcome to StudyOU
+          Welcome to{" "}
+          <l className="bg-blue-400 p-2 rounded-3xl">
+            Study
+            <l className="bg-black py-0.5 px-2  text-white ml-1 rounded-3xl">
+              OU
+            </l>
+          </l>
         </h1>
         <p className="text-lg md:text-xl max-w-2xl">
           Your one-stop solution for BCA, B.Com, B.Sc, and other OU course
