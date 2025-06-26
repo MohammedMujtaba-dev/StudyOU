@@ -40,8 +40,8 @@ const Navbar = () => {
           </div>
 
           {/* Small Screen Icons */}
-          <div className="flex gap-8 ">
-            <div className="flex sm:gap-8 gap-10 items-center">
+          <div className="flex gap-5 sm:gap-8 ml-2 sm:ml-0">
+            <div className="flex sm:gap-8 gap-5 items-center">
               {/* Toggle SearchBar for mobile */}
               <img
                 src={assets.search_icon}
@@ -52,14 +52,14 @@ const Navbar = () => {
               <img
                 src={assets.profile_icon}
                 alt="profile"
-                className="w-5 sm:w-5 sm:h-5"
+                className="w-5 sm:w-5 sm:h-5 cursor-pointer"
               />
             </div>
 
             <img
               src={assets.menu_icon}
               alt="menu"
-              className="w-5 h-4   sm:hidden block"
+              className="w-5 h-4   sm:hidden block cursor-pointer"
               onClick={() => {
                 setVisible(true);
               }}
@@ -69,7 +69,7 @@ const Navbar = () => {
 
         {/* Mobile SearchBar below Navbar */}
         {searchBar && (
-          <div className=" flex items-center gap-3   my-3 px-4 py-2 text-base rounded-2xl bg-white w-2/4 mx-auto shadow-md border ">
+          <div className=" flex items-center gap-3   my-3 px-4 py-2 text-base rounded-2xl bg-white w-3/4 mx-auto shadow-md border ">
             <input
               type="search"
               placeholder="Search..."
