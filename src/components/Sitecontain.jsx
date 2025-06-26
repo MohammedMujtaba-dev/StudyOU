@@ -1,0 +1,111 @@
+import React from "react";
+import { assets } from "../assets/assets";
+
+const Sitecontain = () => {
+  return (
+    <>
+      <div className="sm:mt-30  mt-40 ">
+        <div className="flex items-center justify-center gap-5">
+          <hr className="w-1/18 " />
+          <h1 className="sm:text-4xl text-3xl text-gray-600">Site Contain</h1>
+          <hr className="w-1/18 " />
+        </div>
+        <div className="flex flex-col md:flex-row gap-10 mt-20 ">
+          <img
+            src={assets.bg2_img}
+            alt=""
+            className="shadow-lg shadow-gray-500  rounded-2xl overflow-hidden flex-1"
+          />
+          <div className="flex flex-1 flex-col px-5 gap-3 sm:gap-4  sm:text-xl  text-base ">
+            <p className="text-center  text-2xl sm:text-3xl mb-2 text-gray-500">
+              Site Content Includes:
+            </p>
+            <p>📚 Syllabus for All 6 Semesters (As per Osmania University)</p>
+            <p>📝 Study Material of All Subjects (Semester-wise)</p>
+            <p>📄 Previous Years’ Question Papers </p>
+            <p>🖋️ Important Questions, Exam Tips</p>
+            <p>
+              💻 Mini Project Samples with Source Code (for 5th & 6th Semester
+              Projects)
+            </p>
+            {/* <p>🎓 Job/Internship Opportunities for BCA Students</p> */}
+          </div>
+        </div>
+
+        <hr className="sm:bg-gray-800  my-25" />
+        <div>
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex flex-col px-5 gap-3 sm:gap-5 flex-1 sm:text-xl text-base md:items-end items-center ">
+              <p className="text-center  text-2xl sm:text-3xl mb-2 text-gray-500">
+                Previous Year Papers Section Includes:
+              </p>
+              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+                📌 1st Semester – All Subjects
+              </p>
+              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+                📌 2nd Semester – All Subjects
+              </p>
+              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+                📌 3rd Semester – All Subjects
+              </p>
+              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+                📌 4th Semester – All Subjects
+              </p>
+              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+                📌 5th Semester – All Subjects
+              </p>
+              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+                📌 6th Semester – All Subjects
+              </p>
+            </div>
+            <img
+              src={assets.bg3_img}
+              alt=""
+              className="shadow-lg shadow-gray-500  rounded-2xl overflow-hidden flex-1"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-6 mt-25 justify-center text-center ">
+          <div className="w-full text-center bg-gray-500 rounded-lg  text-white px-4 py-3">
+            <p className="text-xl">
+              NOTE : Currently, Mathematics study material is available only for
+              select semesters.
+            </p>
+          </div>
+          <div className="bg-amber-500 text-white px-5 text-center py-4 w-full rounded-lg">
+            <p className="text-xl flex flex-col gap-2">
+              <b>
+                BCA students can contact us via the Contact Form for help with:
+              </b>
+
+              <p className="text-lg"> Project Development</p>
+              <p className="text-lg"> Practical Assignments </p>
+              <p className="text-lg"> Mini Project Ideas</p>
+            </p>
+          </div>
+        </div>
+        <div className="mt-20 px-4">
+          <h1 className="text-2xl text-center font-semibold text-gray-700">
+            Newsletter
+          </h1>
+          <p className="text-gray-600 text-center mt-2">
+            Subscribe to get latest updates on BCA notes, question papers, and
+            projects.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center mt-6 gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email..."
+              className="w-full sm:w-1/3 px-4 py-3 border border-gray-400 rounded-xl outline-none"
+            />
+            <button className="w-full sm:w-auto px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition duration-200">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Sitecontain;
