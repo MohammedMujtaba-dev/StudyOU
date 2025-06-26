@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="relative z-20 flex flex-col items-center justify-center text-center text-white h-full px-4">
           <h1 className="text-4xl md:text-5xl font-bold ">
             Welcome to{" "}
-            <p className="bg-blue-400 p-1.5 pt-2  rounded-3xl sm:mt-5 sm:innline-block block">
+            <p className="bg-blue-400 px-3 py-3   rounded-3xl sm:mt-5 sm:inline-block block">
               Study
               <b className="bg-black ml-1 px-1  text-white  rounded-3xl">OU</b>
             </p>
