@@ -12,12 +12,12 @@ const Hero = () => {
           alt="StudyOU Banner"
         />
         <div className="relative z-20 flex flex-col items-center justify-center text-center text-white h-full px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold ">
             Welcome to{" "}
-            <l className="bg-blue-400 p-1.5 pt-2  rounded-3xl sm:z-20 z-0">
+            <p className="bg-blue-400 p-1.5 pt-2  rounded-3xl sm:mt-5 sm:innline-block block">
               Study
               <b className="bg-black ml-1 px-1  text-white  rounded-3xl">OU</b>
-            </l>
+            </p>
           </h1>
         </div>
       </div>

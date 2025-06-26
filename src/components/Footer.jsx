@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col sm:flex-row justify-evenly items-center mt-25 bg-gray-50 px-8 py-14">
+      <div className="flex flex-col sm:flex-row justify-evenly sm:items-center items-start  mt-25 bg-gray-50 px-8 py-14">
         <div className="text-3xl sm:text-4xl mb-10 sm:mb-0">
           <l className="bg-blue-400 font-bold p-1.5 pt-2 rounded-3xl ">
             Study
@@ -37,14 +37,17 @@ const Footer = () => {
           <ul className="flex flex-col gap-2">
             <p className="text-xl text-gray-500">Navigation -</p>
             <li>
-              <a href="#nav" className="text-gray-500 hover:text-gray-900">
+              <a
+                href="#nav"
+                className="text-gray-500 hover:text-gray-900 text-base sm:text-lg"
+              >
                 Home
               </a>
             </li>
             <li>
               <NavLink
                 to="/notes"
-                className="text-gray-500 hover:text-gray-900"
+                className="text-gray-500 hover:text-gray-900 text-base sm:text-lg"
               >
                 Study Material
               </NavLink>
@@ -52,7 +55,7 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/about"
-                className="text-gray-500 hover:text-gray-900"
+                className="text-gray-500 hover:text-gray-900 text-base sm:text-lg"
               >
                 About us
               </NavLink>
@@ -60,7 +63,7 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/contact"
-                className="text-gray-500 hover:text-gray-900"
+                className="text-gray-500 hover:text-gray-900 text-base sm:text-lg"
               >
                 Contact
               </NavLink>

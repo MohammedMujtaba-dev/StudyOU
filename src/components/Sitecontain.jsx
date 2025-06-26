@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 const Sitecontain = () => {
   return (
     <>
-      <div className="sm:mt-30  mt-40 ">
+      <div className="sm:mt-30  mt-45 ">
         <div className="flex items-center justify-center gap-5">
           <hr className="w-1/18 " />
           <h1 className="sm:text-4xl text-3xl text-gray-600">Site Contain</h1>
@@ -16,18 +16,22 @@ const Sitecontain = () => {
             alt=""
             className="shadow-lg shadow-gray-500  rounded-2xl overflow-hidden flex-1"
           />
-          <div className="flex flex-1 flex-col px-5 gap-3 sm:gap-4  sm:text-xl  text-base ">
-            <p className="text-center  text-2xl sm:text-3xl mb-2 text-gray-500">
-              Site Content Includes:
-            </p>
-            <p>📚 Syllabus for All 6 Semesters (As per Osmania University)</p>
-            <p>📝 Study Material of All Subjects (Semester-wise)</p>
-            <p>📄 Previous Years’ Question Papers </p>
-            <p>🖋️ Important Questions, Exam Tips</p>
-            <p>
-              💻 Mini Project Samples with Source Code (for 5th & 6th Semester
-              Projects)
-            </p>
+          <div className="flex flex-1 flex-col px-5 gap-4 sm:gap-5  sm:text-xl  text-base ">
+            <ul className="list-disc gap-5 flex flex-col">
+              <p className="text-center  text-2xl sm:text-3xl mb-2 text-gray-500">
+                Site Content Includes:
+              </p>
+              <li>
+                📚 Syllabus for All 6 Semesters (As per Osmania University)
+              </li>
+              <li>📝 Study Material of All Subjects (Semester-wise)</li>
+              <li>📄 Previous Years’ Question Papers </li>
+              <li>🖋️ Important Questions, Exam Tips</li>
+              <li>
+                💻 Mini Project Samples with Source Code (for 5th & 6th Semester
+                Projects)
+              </li>
+            </ul>
             {/* <p>🎓 Job/Internship Opportunities for BCA Students</p> */}
           </div>
         </div>
