@@ -5,12 +5,12 @@ const StudyMaterials = () => {
   return (
     <div className="mt-16 px-4 sm:px-10">
       {/* Section Title */}
-      <div className="flex items-center gap-3 justify-center mb-10">
-        <div className="w-10 sm:w-16 h-[1.5px] bg-gray-400" />
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-600">
+      <div className="flex items-center gap-3 sm:gap-3 justify-center mb-10">
+        <div className="w-8 sm:w-16 h-[1.5px] bg-gray-400" />
+        <h1 className="text-xl sm:text-3xl font-bold text-gray-600">
           STUDY <span className="text-black">MATERIAL</span>
         </h1>
-        <div className="w-10 sm:w-16 h-[1.5px] bg-gray-600" />
+        <p className="w-8 sm:w-16 h-[1.5px] bg-gray-600"></p>
       </div>
 
       {/* Search and Filter */}
