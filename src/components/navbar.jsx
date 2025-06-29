@@ -124,13 +124,13 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/notes"
+                to="/studyMaterials"
                 className="border-t-1 border-b-1 py-3"
                 onClick={() => {
                   setVisible(false);
                 }}
               >
-                Notes
+                Study Materials
               </Link>
               <Link
                 to="/about"
