@@ -27,7 +27,7 @@ const StudyMaterials = () => {
             className="w-5 h-5 cursor-pointer"
           />
         </div>
-        <select className="bg-gray-100 py-2 px-4 rounded-full border border-gray-300 text-sm sm:text-base">
+        <select className="bg-gray-100 py-2 outline-0 px-4 rounded-xl border border-gray-300 text-sm sm:text-base">
           <option value="">Semester 1</option>
           <option value="">Semester 2</option>
           <option value="">Semester 3</option>

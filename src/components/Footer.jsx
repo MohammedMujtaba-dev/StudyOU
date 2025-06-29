@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
 
         <div className="mb-10 sm:mb-0">
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-3">
             <p className="text-xl text-gray-500">Content -</p>
             <li className="text-gray-500 hover:text-gray-900">
               Question Papers
