@@ -1,28 +1,37 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Navbar = () => {
   const [searchBar, setSearchBar] = useState(false);
   const [visible, setVisible] = useState(false);
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname === "/studyMaterials") {
+      setSearchBar(true);
+    } else {
+      setSearchBar(false);
+    }
+  }, [location]);
+
   return (
     <>
       <div id="nav">
-        {/* Top Navbar */}
         <div className="flex justify-evenly items-center py-5 relative sm:justify-around bg-white  shadow-md mb-5">
           <Link to="/" className="text-3xl font-bold text-black">
             Study<span className="text-blue-600">OU</span>
           </Link>
 
           <div className="gap-4 lg:gap-10 text-base font-medium sm:flex hidden items-center">
-            {/* Search Bar for large screens */}
-
-            {/* Nav Links */}
             <NavLink to="/" className="flex flex-col items-center gap-0.5">
               Home
               <hr className="border-none bg-gray-900 h-[1.5px] w-3/4 hidden" />
             </NavLink>
-            <NavLink to="/notes" className="flex flex-col items-center gap-0.5">
+            <NavLink
+              to="/studyMaterials"
+              className="flex flex-col items-center gap-0.5"
+            >
               Study Material
               <hr className="border-none bg-gray-900 h-[1.5px] w-3/4 hidden" />
             </NavLink>
@@ -42,13 +51,13 @@ const Navbar = () => {
           {/* Small Screen Icons */}
           <div className="flex gap-5 sm:gap-8 ml-2 sm:ml-0">
             <div className="flex sm:gap-8 gap-5 items-center">
-              {/* Toggle SearchBar for mobile */}
-              <img
-                src={assets.search_icon}
-                alt="search"
-                className=" w-5  sm:w-5 sm:h-5 cursor-pointer  block"
-                onClick={() => setSearchBar(!searchBar)}
-              />
+              <Link to="/studyMaterials">
+                <img
+                  src={assets.search_icon}
+                  alt="search"
+                  className=" w-5  sm:w-5 sm:h-5 cursor-pointer  block"
+                />
+              </Link>
               <img
                 src={assets.profile_icon}
                 alt="profile"
@@ -68,7 +77,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile SearchBar below Navbar */}
-        {searchBar && (
+        {/* {searchBar && location.pathname === "/studyMaterials" && (
           <div className=" flex items-center gap-3   my-3 px-4 py-2 text-base rounded-2xl bg-white w-3/4 mx-auto shadow-md border ">
             <input
               type="search"
@@ -89,7 +98,7 @@ const Navbar = () => {
               }}
             />
           </div>
-        )}
+        )} */}
       </div>
       {visible && (
         <div>

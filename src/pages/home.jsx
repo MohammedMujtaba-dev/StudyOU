@@ -7,7 +7,6 @@ const home = () => {
     <>
       <Hero />
       <Sitecontain />
-      <Footer />
     </>
   );
 };
