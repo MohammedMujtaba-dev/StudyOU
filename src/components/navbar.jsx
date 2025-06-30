@@ -5,7 +5,7 @@ import { assets } from "../assets/assets";
 const Navbar = () => {
   const [searchBar, setSearchBar] = useState(false);
   const [visible, setVisible] = useState(false);
-
+  const [dropDown, setDropDown] = useState(false);
   const location = useLocation();
   useEffect(() => {
     if (location.pathname === "/studyMaterials") {
@@ -62,7 +62,32 @@ const Navbar = () => {
                 src={assets.profile_icon}
                 alt="profile"
                 className="w-5 sm:w-5 sm:h-5 cursor-pointer"
+                onClick={() => {
+                  setDropDown(!dropDown);
+                }}
               />
+              {dropDown ? (
+                <div className="fixed z-10 top-15 right-50 border-3 border-gray-600 bg-gray-100 text-white  px-4 py-3 rounded ">
+                  <p
+                    className=" text-gray-700 mb-1 hover:text-blue-500 text-md font-bold cursor-pointer"
+                    onClick={() => {
+                      setDropDown(false);
+                    }}
+                  >
+                    <Link to="/login">Login</Link>
+                  </p>
+                  <p
+                    className="text-gray-700 hover:text-blue-500 text-md font-bold cursor-pointer"
+                    onClick={() => {
+                      setDropDown(false);
+                    }}
+                  >
+                    <Link to="/signup">SignUp</Link>
+                  </p>
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
 
             <img

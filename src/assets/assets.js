@@ -16,3 +16,12 @@ export const assets = {
   bg2_img,
   bg3_img,
 };
+
+export const Material = [
+  {
+    id: "1M",
+    name: "MATHEMATICAL FOUNDATION OF COMPUTER SCIENCE",
+    type: "Material",
+    semester: "1",
+  },
+];
