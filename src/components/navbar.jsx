@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div id="nav">
+      <div id="nav" className="fixed top-0 z-40 w-9/11">
         <div className="flex justify-evenly items-center py-5 relative sm:justify-around bg-white  shadow-md mb-5">
           <Link to="/" className="text-3xl font-bold text-black">
             Study<span className="text-blue-600">OU</span>
@@ -58,36 +58,34 @@ const Navbar = () => {
                   className=" w-5  sm:w-5 sm:h-5 cursor-pointer  block"
                 />
               </Link>
-              <img
-                src={assets.profile_icon}
-                alt="profile"
-                className="w-5 sm:w-5 sm:h-5 cursor-pointer"
-                onClick={() => {
-                  setDropDown(!dropDown);
-                }}
-              />
-              {dropDown ? (
-                <div className="fixed z-10 top-15 right-50 border-3 border-gray-600 bg-gray-100 text-white  px-4 py-3 rounded ">
-                  <p
-                    className=" text-gray-700 mb-1 hover:text-blue-500 text-md font-bold cursor-pointer"
-                    onClick={() => {
-                      setDropDown(false);
-                    }}
-                  >
-                    <Link to="/login">Login</Link>
-                  </p>
-                  <p
-                    className="text-gray-700 hover:text-blue-500 text-md font-bold cursor-pointer"
-                    onClick={() => {
-                      setDropDown(false);
-                    }}
-                  >
-                    <Link to="/signup">SignUp</Link>
-                  </p>
-                </div>
-              ) : (
-                <div></div>
-              )}
+              <div className="relative">
+                <img
+                  src={assets.profile_icon}
+                  alt="PROFILE ICON"
+                  className="w-5 cursor-pointer"
+                  onClick={() => setDropDown(!dropDown)}
+                />
+                {dropDown && (
+                  <div className="absolute right-0 pt-4 z-10">
+                    <div className="flex flex-col gap-2 w-32 px-5 py-3 bg-slate-100 text-gray-500 rounded shadow-md z-50">
+                      <Link
+                        to="/login"
+                        className="hover:text-black"
+                        onClick={() => setDropDown(false)}
+                      >
+                        Login
+                      </Link>
+                      <Link
+                        to="/signup"
+                        className="hover:text-black"
+                        onClick={() => setDropDown(false)}
+                      >
+                        Signup
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             <img

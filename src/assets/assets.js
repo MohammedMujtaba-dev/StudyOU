@@ -19,9 +19,43 @@ export const assets = {
 
 export const Material = [
   {
-    id: "1M",
-    name: "MATHEMATICAL FOUNDATION OF COMPUTER SCIENCE",
+    id: "1M1",
+    name: "Mathematical Foundations of Computer Science",
     type: "Material",
     semester: "1",
+    img: "bg1_img",
+    pdfLink: "Months",
+  },
+  {
+    id: "1M2",
+    name: "	Introduction to Web Technology",
+    type: "Material",
+    semester: "1",
+    img: "ImgLink",
+    pdfLink: "PDFLink",
+  },
+  {
+    id: "1M3",
+    name: "Digital Principles",
+    type: "Material",
+    semester: "1",
+    img: "ImgLink",
+    pdfLink: "PDFLink",
+  },
+  {
+    id: "1M4",
+    name: "	Programming in C",
+    type: "Material",
+    semester: "1",
+    img: "ImgLink",
+    pdfLink: "PDFLink",
+  },
+  {
+    id: "1M5",
+    name: "Effective Communication",
+    type: "Material",
+    semester: "1",
+    img: "ImgLink",
+    pdfLink: "PDFLink",
   },
 ];

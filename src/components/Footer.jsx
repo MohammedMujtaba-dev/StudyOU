@@ -37,16 +37,16 @@ const Footer = () => {
           <ul className="flex flex-col gap-2">
             <p className="text-xl text-gray-500">Navigation -</p>
             <li>
-              <a
-                href="#nav"
+              <Link
+                to="/"
                 className="text-gray-500 hover:text-gray-900 text-base sm:text-lg"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <NavLink
-                to="/notes"
+                to="/studyMaterials"
                 className="text-gray-500 hover:text-gray-900 text-base sm:text-lg"
               >
                 Study Material
