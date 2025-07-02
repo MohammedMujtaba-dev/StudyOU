@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
 
           {/* Small Screen Icons */}
-          <div className="flex gap-5 sm:gap-8 ml-2 sm:ml-0">
+          <div className="flex gap-5 sm:gap-8 ml-2 sm:ml-0 items-center">
             <div className="flex sm:gap-8 gap-5 items-center">
               <Link to="/studyMaterials">
                 <img
