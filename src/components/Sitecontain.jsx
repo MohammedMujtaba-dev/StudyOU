@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const Sitecontain = () => {
   return (
@@ -44,24 +45,42 @@ const Sitecontain = () => {
               <p className="text-center  text-2xl sm:text-3xl mb-2 text-gray-500">
                 Previous Year Papers Section Includes:
               </p>
-              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+              <Link
+                to="/studyMaterials"
+                className="text-gray-400 hover:text-gray-800 cursor-pointer"
+              >
                 📌 1st Semester – All Subjects
-              </p>
-              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+              </Link>
+              <Link
+                to="/studyMaterials"
+                className="text-gray-400 hover:text-gray-800 cursor-pointer"
+              >
                 📌 2nd Semester – All Subjects
-              </p>
-              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+              </Link>
+              <Link
+                to="/studyMaterials"
+                className="text-gray-400 hover:text-gray-800 cursor-pointer"
+              >
                 📌 3rd Semester – All Subjects
-              </p>
-              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+              </Link>
+              <Link
+                to="/studyMaterials"
+                className="text-gray-400 hover:text-gray-800 cursor-pointer"
+              >
                 📌 4th Semester – All Subjects
-              </p>
-              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+              </Link>
+              <Link
+                to="/studyMaterials"
+                className="text-gray-400 hover:text-gray-800 cursor-pointer"
+              >
                 📌 5th Semester – All Subjects
-              </p>
-              <p className="text-gray-400 hover:text-gray-800 cursor-pointer">
+              </Link>
+              <Link
+                to="/studyMaterials"
+                className="text-gray-400 hover:text-gray-800 cursor-pointer"
+              >
                 📌 6th Semester – All Subjects
-              </p>
+              </Link>
             </div>
             <img
               src={assets.bg3_img}
