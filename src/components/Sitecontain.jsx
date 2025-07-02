@@ -38,7 +38,7 @@ const Sitecontain = () => {
           </div>
         </div>
 
-        <hr className="sm:bg-gray-800  my-25" />
+        <hr className="sm:bg-gray-800  my-15" />
         <div>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="flex flex-col px-5 gap-3 sm:gap-5 flex-1 sm:text-xl text-base md:items-end items-center ">
