@@ -18,7 +18,12 @@ const Card = ({ name, img, pdfLink, semester, type, description }) => {
       <p className="text-sm sm:text-base text-gray-600 mb-4">{description}</p>
       <div className="flex gap-3">
         <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm sm:text-base px-4 py-1.5 rounded-full">
-          <a href={pdfLink} target="_blank">
+          <a
+            href={`https://docs.google.com/viewer?url=${encodeURIComponent(
+              pdfLink
+            )}`}
+            target="_blank"
+          >
             View
           </a>
         </button>
