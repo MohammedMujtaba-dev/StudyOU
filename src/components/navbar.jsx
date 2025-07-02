@@ -18,7 +18,8 @@ const Navbar = () => {
   return (
     <>
       <div id="nav">
-        <div className="flex justify-evenly items-center py-5 relative sm:justify-around bg-white  shadow-md mb-5">
+        {/* <div className="flex justify-evenly items-center py-5 relative sm:justify-around bg-white  shadow-md mb-5"> */}
+        <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md flex justify-evenly items-center py-5 sm:justify-around">
           <Link to="/" className="text-3xl font-bold text-black">
             Study<span className="text-blue-600">OU</span>
           </Link>

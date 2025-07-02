@@ -4,23 +4,24 @@ import Card from "./Card";
 
 const StudyMaterials = () => {
   const [products, setProducts] = useState([]);
-  const [sem, setSem] = useState("");
-  const [type, setType] = useState("");
-
+  const [sem, setSem] = useState("All");
+  const [type, setType] = useState("All");
+  const [search, setSearch] = useState("");
   useEffect(() => {
     setProducts(Material);
   }, []);
 
   const filterProducts = products.filter((item) => {
-    const matchType = type === "" || type === item.type;
-    const matchSem = sem === "" || sem === item.semester;
-    return matchType && matchSem;
+    const matchSearch = item.name.toLowerCase().includes(search.toLowerCase());
+    const matchesSem = sem === "All" || item.semester === sem;
+    const matchesType = type === "All" || item.type === type;
+    return matchesSem && matchesType && matchSearch;
   });
 
   return (
-    <div className="mt-16 px-4 sm:px-10">
+    <div className="mt-14 px-4 sm:px-10">
       {/* Section Title */}
-      <div className="flex items-center gap-3 sm:gap-3 justify-center mb-10">
+      <div className="flex items-center gap-3 sm:gap-3 justify-center mb-12">
         <div className="w-8 sm:w-16 h-[1.5px] bg-gray-400" />
         <h1 className="text-xl sm:text-3xl font-bold text-gray-600">
           STUDY <span className="text-black">MATERIAL</span>
@@ -35,6 +36,9 @@ const StudyMaterials = () => {
             type="search"
             placeholder="Search notes..."
             className=" outline-none px-2 text-sm sm:text-base w-full "
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
           />
           <img
             src={assets.search_icon}
@@ -49,9 +53,9 @@ const StudyMaterials = () => {
               setType(e.target.value);
             }}
           >
-            <option value="">All types</option>
-            <option value="">Material</option>
-            <option value="">Question paper</option>
+            <option value="All">All types</option>
+            <option value="Material">Material</option>
+            <option value="Question paper">Question Paper</option>
           </select>
           <select
             className="bg-gray-100 py-2 outline-0 px-2 sm:px-4 rounded-xl border border-gray-300 text-sm sm:text-base"
@@ -59,12 +63,13 @@ const StudyMaterials = () => {
               setSem(e.target.value);
             }}
           >
-            <option value="">Semester 1</option>
-            <option value="">Semester 2</option>
-            <option value="">Semester 3</option>
-            <option value="">Semester 4</option>
-            <option value="">Semester 5</option>
-            <option value="">Semester 6</option>
+            <option value="All">All Semesters</option>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
           </select>
         </div>
       </div>
@@ -77,6 +82,8 @@ const StudyMaterials = () => {
             img={items.img}
             pdfLink={items.pdfLink}
             semester={items.semester}
+            type={items.type}
+            description={items.description}
           />
         ))}
       </div>
