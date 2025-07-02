@@ -91,20 +91,20 @@ const Sitecontain = () => {
         </div>
         <div className="flex flex-col gap-6 mt-25 justify-center text-center ">
           <div className="w-full text-center bg-gray-500 rounded-lg  text-white px-4 py-3">
-            <p className="text-xl">
+            <p className="text-md sm:text-xl">
               NOTE : Currently, Mathematics study material is available only for
               select semesters.
             </p>
           </div>
           <div className="bg-amber-500 text-white px-5 text-center py-4 w-full rounded-lg">
-            <p className="text-xl flex flex-col gap-2">
+            <p className="text-lg sm:text-xl flex flex-col gap-2">
               <b>
                 BCA students can contact us via the Contact Form for help with:
               </b>
 
-              <p className="text-lg"> Project Development</p>
-              <p className="text-lg"> Practical Assignments </p>
-              <p className="text-lg"> Mini Project Ideas</p>
+              <p className="text-base sm:text-lg"> Project Development</p>
+              <p className="text-base sm:text-lg"> Practical Assignments </p>
+              <p className="text-base sm:text-lg"> Mini Project Ideas</p>
             </p>
           </div>
         </div>
