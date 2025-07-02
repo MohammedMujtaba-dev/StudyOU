@@ -8,7 +8,9 @@ const Sitecontain = () => {
       <div className="sm:mt-30  mt-54 ">
         <div className="flex items-center justify-center gap-5">
           <hr className="w-1/18 " />
-          <h1 className="sm:text-4xl text-3xl text-gray-600">Site Contain</h1>
+          <h1 className="sm:text-4xl text-3xl text-gray-600">
+            Site <b className="text-gray-900">Contain</b>
+          </h1>
           <hr className="w-1/18 " />
         </div>
         <div className="flex flex-col md:flex-row gap-10 sm:mt-20 mt-15 ">
