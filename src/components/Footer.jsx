@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -14,25 +16,6 @@ const Footer = () => {
             Thanks for visiting here !
           </p>
         </div>
-
-        <div className="mb-10 sm:mb-0">
-          <ul className="flex flex-col gap-3">
-            <p className="text-xl text-gray-500">Content -</p>
-            <li className="text-gray-500 hover:text-gray-900">
-              Question Papers
-            </li>
-            <li className="text-gray-500 hover:text-gray-900">
-              Study Materials
-            </li>
-            <li className="text-gray-500 hover:text-gray-900">
-              AI Generated Answers
-            </li>
-            <li className="text-gray-500 hover:text-gray-900">
-              Final year Projects
-            </li>
-          </ul>
-        </div>
-
         <div>
           <ul className="flex flex-col gap-2">
             <p className="text-xl text-gray-500">Navigation -</p>
@@ -67,6 +50,25 @@ const Footer = () => {
               >
                 Contact
               </NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="mb-10 sm:mb-0 text-lg">
+          <ul className="flex flex-col gap-3">
+            <p className="text-xl text-gray-500">Contact -</p>
+            <li className="text-gray-500 hover:text-gray-900 flex items-center gap-2">
+              <FaGithub />{" "}
+              <a href="https://github.com/MohammedMujtaba-dev/">GitHub</a>
+            </li>
+            <li className="text-gray-500 hover:text-gray-900 flex items-center gap-2">
+              <FaLinkedin />
+              <a href="https://www.linkedin.com/in/mohammed-mujtaba-99361729a/">
+                Linkedin
+              </a>
+            </li>
+            <li className="text-gray-500 hover:text-gray-900 flex items-center gap-2">
+              <MdEmail />
+              <a href="mailto:mohdmujtabawork706@gmail.com">Mail</a>
             </li>
           </ul>
         </div>
