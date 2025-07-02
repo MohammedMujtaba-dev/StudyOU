@@ -13,7 +13,11 @@ const Contact = () => {
           </p>
         </div>
 
-        <form className="flex flex-col gap-6">
+        <form
+          action="https://formsubmit.co/mohdmujtabawork706@gmail.com"
+          method="POST"
+          className="flex flex-col gap-6"
+        >
           <input
             type="text"
             name="name"
