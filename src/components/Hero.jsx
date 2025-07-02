@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <div className="relative w-full h-[600px] border rounded mt-2">
+      <div className="relative w-full h-[600px] border rounded mt-1 sm:mt-3">
         <img
           className="w-full h-full object-cover absolute "
           // src="https://www.usnews.com/dims4/USNEWS/cd47aff/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F6e%2F8d%2Facd3c7d947b59d0f30982fc53bec%2F7-bizzell-library-summer-ou-flag-lamppost-cropped.png"
