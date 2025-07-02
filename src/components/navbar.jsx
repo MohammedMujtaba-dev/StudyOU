@@ -56,14 +56,14 @@ const Navbar = () => {
                 <img
                   src={assets.search_icon}
                   alt="search"
-                  className=" w-4  sm:w-5 sm:h-5 cursor-pointer  block"
+                  className=" w-4.5  sm:w-5 sm:h-5 cursor-pointer  block"
                 />
               </Link>
               <div className="relative">
                 <img
                   src={assets.profile_icon}
                   alt="PROFILE ICON"
-                  className="w-4 sm:w-5 cursor-pointer"
+                  className="w-4.5 sm:w-5 cursor-pointer"
                   onClick={() => setDropDown(!dropDown)}
                 />
                 {dropDown && (
@@ -92,7 +92,7 @@ const Navbar = () => {
             <img
               src={assets.menu_icon}
               alt="menu"
-              className="w-4 h-3 sm:w-5 sm:h-4   sm:hidden block cursor-pointer"
+              className="w-4.5 h-3.5 sm:w-5 sm:h-4   sm:hidden block cursor-pointer"
               onClick={() => {
                 setVisible(true);
               }}
