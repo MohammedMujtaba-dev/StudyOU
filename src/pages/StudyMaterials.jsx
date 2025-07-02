@@ -19,9 +19,9 @@ const StudyMaterials = () => {
   });
 
   return (
-    <div className="mt-14 px-4 sm:px-10">
+    <div className="mt-10 sm:mt-14 px-4 sm:px-10">
       {/* Section Title */}
-      <div className="flex items-center gap-3 sm:gap-3 justify-center mb-12">
+      <div className="flex items-center gap-3 sm:gap-3 justify-center mb-10">
         <div className="w-8 sm:w-16 h-[1.5px] bg-gray-400" />
         <h1 className="text-xl sm:text-3xl font-bold text-gray-600">
           STUDY <span className="text-black">MATERIAL</span>
