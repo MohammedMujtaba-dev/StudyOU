@@ -20,7 +20,7 @@ const Navbar = () => {
       <div id="nav">
         {/* <div className="flex justify-evenly items-center py-5 relative sm:justify-around bg-white  shadow-md mb-5"> */}
         <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md flex justify-evenly items-center py-5 sm:justify-around">
-          <Link to="/" className="text-3xl font-bold text-black">
+          <Link to="/" className="text-2xl sm:text-3xl font-bold text-black">
             Study<span className="text-blue-600">OU</span>
           </Link>
 
@@ -56,14 +56,14 @@ const Navbar = () => {
                 <img
                   src={assets.search_icon}
                   alt="search"
-                  className=" w-5  sm:w-5 sm:h-5 cursor-pointer  block"
+                  className=" w-4  sm:w-5 sm:h-5 cursor-pointer  block"
                 />
               </Link>
               <div className="relative">
                 <img
                   src={assets.profile_icon}
                   alt="PROFILE ICON"
-                  className="w-5 cursor-pointer"
+                  className="w-4 sm:w-5 cursor-pointer"
                   onClick={() => setDropDown(!dropDown)}
                 />
                 {dropDown && (
@@ -92,7 +92,7 @@ const Navbar = () => {
             <img
               src={assets.menu_icon}
               alt="menu"
-              className="w-5 h-4   sm:hidden block cursor-pointer"
+              className="w-4 h-3 sm:w-5 sm:h-4   sm:hidden block cursor-pointer"
               onClick={() => {
                 setVisible(true);
               }}
