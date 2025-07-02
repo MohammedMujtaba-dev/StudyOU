@@ -22,14 +22,15 @@ const Sitecontain = () => {
                 Site Content Includes:
               </p>
               <li>
-                📚 Syllabus for All 6 Semesters (As per Osmania University)
+                {/*📚*/} Syllabus for All 6 Semesters (As per Osmania
+                University)
               </li>
-              <li>📝 Study Material of All Subjects (Semester-wise)</li>
-              <li>📄 Previous Years’ Question Papers </li>
-              <li>🖋️ Important Questions, Exam Tips</li>
+              <li>{/*📝*/} Study Material of All Subjects (Semester-wise)</li>
+              <li>{/*📄*/} Previous Years’ Question Papers </li>
+              <li>{/*🖋️*/} Important Questions, Exam Tips</li>
               <li>
-                💻 Mini Project Samples with Source Code (for 5th & 6th Semester
-                Projects)
+                {/*💻*/} Mini Project Samples with Source Code (for 5th & 6th
+                Semester Projects)
               </li>
             </ul>
             {/* <p>🎓 Job/Internship Opportunities for BCA Students</p> */}
