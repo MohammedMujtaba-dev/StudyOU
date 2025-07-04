@@ -42,7 +42,7 @@ const login = () => {
 
   return (
     <div className="bg-none sm:bg-gray-50 min-h-screen pt-6 ">
-      <div className="max-w-md mx-auto space-y-6 bg-white shadow-md p-6 sm:p-12 rounded-lg">
+      <div className="max-w-md mx-auto space-y-6 bg-white shadow-md p-6  sm:p-12 rounded-lg">
         <div className="text-center">
           <h1 className="text-2xl sm:text-4xl font-bold text-gray-600 ">
             Login
@@ -77,7 +77,7 @@ const login = () => {
           </button>
           <p className="text-gray-700 text-center">
             Don't have an account?
-            <Link to="/login" className="text-blue-500">
+            <Link to="/signup" className="text-blue-500">
               {" "}
               Signup
             </Link>

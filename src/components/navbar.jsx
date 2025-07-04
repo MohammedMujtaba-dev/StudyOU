@@ -37,7 +37,7 @@ const Navbar = () => {
               <hr className="border-none bg-gray-900 h-[1.5px] w-3/4 hidden" />
             </NavLink>
             <NavLink to="/about" className="flex flex-col items-center gap-0.5">
-              About Us
+              About
               <hr className="border-none bg-gray-900 h-[1.5px] w-3/4 hidden" />
             </NavLink>
             <NavLink
@@ -163,7 +163,7 @@ const Navbar = () => {
                   setVisible(false);
                 }}
               >
-                About us
+                About
               </Link>
               <Link
                 to="/contact"

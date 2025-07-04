@@ -5,6 +5,14 @@ a.active hr {
   display: block;
 }
 
+a:active {
+  color: blue;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 * {
   font-family: Outfit;
 }
