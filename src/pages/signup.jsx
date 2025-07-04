@@ -53,6 +53,7 @@ const signup = () => {
             <label htmlFor="name">Name :</label>
             <input
               name="name"
+              value={name}
               type="text"
               placeholder="Enter name"
               required
@@ -62,6 +63,7 @@ const signup = () => {
           <div className="flex flex-col gap-1 mb-4">
             <label htmlFor="email">Email :</label>
             <input
+              value={email}
               name="email"
               type="text"
               placeholder="Enter email"
@@ -72,6 +74,7 @@ const signup = () => {
           <div className="flex flex-col gap-1 mb-4">
             <label htmlFor="password">Password :</label>
             <input
+              value={password}
               name="password"
               type="text"
               placeholder="Enter password"

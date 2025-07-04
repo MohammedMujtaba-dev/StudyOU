@@ -53,6 +53,7 @@ const login = () => {
             <label htmlFor="email">Email :</label>
             <input
               name="email"
+              value={email}
               type="text"
               placeholder="Enter email"
               required
@@ -62,6 +63,7 @@ const login = () => {
           <div className="flex flex-col gap-1 mb-4">
             <label htmlFor="password">Password :</label>
             <input
+              value={password}
               name="password"
               type="text"
               placeholder="Enter password"
