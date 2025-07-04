@@ -3,11 +3,12 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const signup = () => {
+const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -20,7 +21,6 @@ const signup = () => {
         toast.success("Signup successful");
         navigate("/login");
       } else {
-        // If backend returns success: false
         if (response.data.message === "User already exists") {
           toast.error("Account already exists. Please log in.");
         } else {
@@ -41,45 +41,48 @@ const signup = () => {
   };
 
   return (
-    <div className="bg-none sm:bg-gray-50 min-h-screen pt-6 ">
+    <div className="bg-none sm:bg-gray-50 min-h-screen pt-6">
       <div className="max-w-md mx-auto space-y-6 bg-white shadow-md p-6 sm:p-12 rounded-lg">
         <div className="text-center">
-          <h1 className="text-2xl sm:text-4xl font-bold text-gray-600 ">
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-600">
             SignUp
           </h1>
         </div>
-        <form onSubmit={handleSubmit} className="flex flex-col  ">
-          <div className="flex flex-col gap-1 mb-4 ">
+        <form onSubmit={handleSubmit} className="flex flex-col">
+          <div className="flex flex-col gap-1 mb-4">
             <label htmlFor="name">Name :</label>
             <input
               name="name"
-              value={name}
               type="text"
               placeholder="Enter name"
               required
-              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none"
             />
           </div>
           <div className="flex flex-col gap-1 mb-4">
             <label htmlFor="email">Email :</label>
             <input
-              value={email}
               name="email"
-              type="text"
+              type="email"
               placeholder="Enter email"
               required
-              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none"
             />
           </div>
           <div className="flex flex-col gap-1 mb-4">
             <label htmlFor="password">Password :</label>
             <input
-              value={password}
               name="password"
-              type="text"
+              type="password"
               placeholder="Enter password"
               required
-              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none"
             />
           </div>
           <button
@@ -89,7 +92,7 @@ const signup = () => {
             Signup
           </button>
           <p className="text-gray-700 text-center">
-            Already have account?
+            Already have an account?
             <Link to="/login" className="text-blue-500">
               {" "}
               Login
@@ -101,4 +104,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
