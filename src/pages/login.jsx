@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const login = () => {
   const [email, setEmail] = useState("");
@@ -13,51 +14,71 @@ const login = () => {
         "http://localhost:3000/api/auth/login",
         { email, password }
       );
+
       if (response.data.success) {
+        toast.success("Login successful");
         localStorage.setItem("token", response.data.token);
         navigate("/");
+      } else {
+        // Backend said success: false
+        if (response.data.message === "User not found") {
+          toast.error("Account does not exist. Please sign up first.");
+        } else {
+          toast.error(response.data.message || "Login failed");
+        }
       }
-      console.log(response);
     } catch (error) {
-      console.log(error);
+      if (error.response && error.response.data) {
+        if (error.response.data.message === "User not found") {
+          toast.error("Account does not exist. Please sign up first.");
+        } else {
+          toast.error(error.response.data.message || "Login failed");
+        }
+      } else {
+        toast.error("Login failed. Please try again.");
+      }
     }
   };
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-cover bg-[url('https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?cs=srgb&dl=pexels-ivo-rainha-527110-1290141.jpg&fm=jpg')]">
-      <div className="p-8  w-90 bg-white rounded">
-        <h2 className="text-3xl font-bold mb-4 text-black ">Login</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block ">Email</label>
+    <div className="bg-none sm:bg-gray-50 min-h-screen pt-6 ">
+      <div className="max-w-md mx-auto space-y-6 bg-white shadow-md p-6 sm:p-12 rounded-lg">
+        <div className="text-center">
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-600 ">
+            Login
+          </h1>
+        </div>
+        <form onSubmit={handleSubmit} className="flex flex-col  ">
+          <div className="flex flex-col gap-1 mb-4">
+            <label htmlFor="email">Email :</label>
             <input
-              className="border  border-gray-300 w-full text-gray-500 px-3 py-2"
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter Email"
+              name="email"
+              type="text"
+              placeholder="Enter email"
               required
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
             />
           </div>
-          <div className="mb-4">
-            <label className="block">Password</label>
+          <div className="flex flex-col gap-1 mb-4">
+            <label htmlFor="password">Password :</label>
             <input
-              className="border  border-gray-300 w-full text-gray-500 px-3 py-2"
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter Password"
+              name="password"
+              type="text"
+              placeholder="Enter password"
               required
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
             />
           </div>
-          <div className="flex justify-center items-center">
-            <button
-              className=" rounded  py-2 w-full bg-teal-600 text-white
-        "
-            >
-              Login
-            </button>
-          </div>
-          <p className="text-center">
-            Don't have an account?{" "}
-            <Link to="/signup" className="text-blue-500">
+          <button
+            type="submit"
+            className="bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition mb-3"
+          >
+            Login
+          </button>
+          <p className="text-gray-700 text-center">
+            Don't have an account?
+            <Link to="/login" className="text-blue-500">
+              {" "}
               Signup
             </Link>
           </p>

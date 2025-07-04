@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const signup = () => {
   const [name, setName] = useState("");
@@ -14,60 +15,80 @@ const signup = () => {
         "http://localhost:3000/api/auth/signup",
         { name, email, password }
       );
+
       if (response.data.success) {
+        toast.success("Signup successful");
         navigate("/login");
+      } else {
+        // If backend returns success: false
+        if (response.data.message === "User already exists") {
+          toast.error("Account already exists. Please log in.");
+        } else {
+          toast.error(response.data.message || "Signup failed");
+        }
       }
-      console.log(response);
     } catch (error) {
-      console.log(error);
+      if (error.response && error.response.data) {
+        if (error.response.data.message === "User already exists") {
+          toast.error("Account already exists. Please log in.");
+        } else {
+          toast.error(error.response.data.message || "Signup failed");
+        }
+      } else {
+        toast.error("Signup failed. Please try again.");
+      }
     }
   };
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-cover  bg-[url('https://www.voicesofruralindia.org/wp-content/uploads/2020/11/ylswjsy7stw-1140x668.jpg')] ">
-      <div className="p-8  w-90 bg-white rounded">
-        <h2 className="text-3xl font-bold mb-4 text-black ">Sign Up</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block ">Name</label>
+    <div className="bg-none sm:bg-gray-50 min-h-screen pt-6 ">
+      <div className="max-w-md mx-auto space-y-6 bg-white shadow-md p-6 sm:p-12 rounded-lg">
+        <div className="text-center">
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-600 ">
+            SignUp
+          </h1>
+        </div>
+        <form onSubmit={handleSubmit} className="flex flex-col  ">
+          <div className="flex flex-col gap-1 mb-4 ">
+            <label htmlFor="name">Name :</label>
             <input
-              className="border border-gray-300 w-full text-gray-500 px-3 py-2"
+              name="name"
               type="text"
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Enter Name"
+              placeholder="Enter name"
               required
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
             />
           </div>
-          <div className="mb-4">
-            <label className="block ">Email</label>
+          <div className="flex flex-col gap-1 mb-4">
+            <label htmlFor="email">Email :</label>
             <input
-              className="border  border-gray-300 w-full text-gray-500 px-3 py-2"
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter Email"
+              name="email"
+              type="text"
+              placeholder="Enter email"
               required
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
             />
           </div>
-          <div className="mb-4">
-            <label className="block">Password</label>
+          <div className="flex flex-col gap-1 mb-4">
+            <label htmlFor="password">Password :</label>
             <input
-              className="border  border-gray-300 w-full text-gray-500 px-3 py-2"
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter Password"
+              name="password"
+              type="text"
+              placeholder="Enter password"
               required
+              className="border border-gray-300 px-4 py-3 rounded-md outline-none "
             />
           </div>
-          <div className="flex justify-center items-center">
-            <button
-              className=" rounded  py-2 w-full bg-teal-600 text-white
-            "
-            >
-              Signup
-            </button>
-          </div>
-          <p className="text-center">
-            Already Have Account?{" "}
+          <button
+            type="submit"
+            className="bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition mb-3"
+          >
+            Signup
+          </button>
+          <p className="text-gray-700 text-center">
+            Already have account?
             <Link to="/login" className="text-blue-500">
+              {" "}
               Login
             </Link>
           </p>

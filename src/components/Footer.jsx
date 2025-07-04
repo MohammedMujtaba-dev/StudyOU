@@ -16,7 +16,7 @@ const Footer = () => {
             Thanks for visiting here !
           </p>
         </div>
-        <div>
+        <div className="mb-10">
           <ul className="flex flex-col gap-2">
             <p className="text-xl text-gray-500">Navigation -</p>
             <li>
@@ -53,9 +53,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="mb-10 sm:mb-0 text-lg">
+        <div className=" sm:mb-0 text-base sm:text-lg">
           <ul className="flex flex-col gap-3">
-            <p className="text-xl text-gray-500">Contact -</p>
+            <p className="text-base sm:text-xl text-gray-500">Contact -</p>
             <li className="text-gray-500 hover:text-gray-900 flex items-center gap-2">
               <FaGithub />{" "}
               <a href="https://github.com/MohammedMujtaba-dev/">GitHub</a>
@@ -66,9 +66,11 @@ const Footer = () => {
                 Linkedin
               </a>
             </li>
-            <li className="text-gray-500 hover:text-gray-900 flex items-center gap-2">
+            <li className="text-gray-500 hover:text-gray-900 sm:text-lg text-sm flex items-center gap-2">
               <MdEmail />
-              <a href="mailto:mohdmujtabawork706@gmail.com">Mail</a>
+              <a href="mailto:mohdmujtabawork706@gmail.com">
+                mohdmujtabawork706@gmail.com
+              </a>
             </li>
           </ul>
         </div>
