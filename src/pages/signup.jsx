@@ -12,7 +12,7 @@ const signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/signup",
+        "https://studyou-api.onrender.com/api/auth/signup",
         { name, email, password }
       );
 
