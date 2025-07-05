@@ -20,12 +20,6 @@ const Signup = () => {
       if (response.data.success) {
         toast.success("Signup successful");
         navigate("/login");
-      } else {
-        if (response.data.message === "User already exists") {
-          toast.error("Account already exists. Please log in.");
-        } else {
-          toast.error(response.data.message || "Signup failed");
-        }
       }
     } catch (error) {
       if (error.response && error.response.data) {

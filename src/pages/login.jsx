@@ -19,13 +19,6 @@ const login = () => {
         toast.success("Login successful");
         localStorage.setItem("token", response.data.token);
         navigate("/");
-      } else {
-        // Backend said success: false
-        if (response.data.message === "User not found") {
-          toast.error("Account does not exist. Please sign up first.");
-        } else {
-          toast.error(response.data.message || "Login failed");
-        }
       }
     } catch (error) {
       if (error.response && error.response.data) {
