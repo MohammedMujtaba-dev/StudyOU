@@ -7,6 +7,13 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [dropDown, setDropDown] = useState(false);
   const location = useLocation();
+  const token = localStorage.getItem("token");
+  const logout = () => {
+    localStorage.removeItem("token");
+    setDropDown(false);
+    window.location.href = "/login"; // optional: redirect to login page
+  };
+
   useEffect(() => {
     if (location.pathname === "/studyMaterials") {
       setSearchBar(true);
@@ -69,20 +76,31 @@ const Navbar = () => {
                 {dropDown && (
                   <div className="absolute right-0 pt-4 z-10">
                     <div className="flex flex-col gap-2 w-32 px-5 py-3 bg-slate-100 text-gray-500 rounded shadow-md z-50">
-                      <Link
-                        to="/login"
-                        className="hover:text-black"
-                        onClick={() => setDropDown(false)}
-                      >
-                        Login
-                      </Link>
-                      <Link
-                        to="/signup"
-                        className="hover:text-black"
-                        onClick={() => setDropDown(false)}
-                      >
-                        Signup
-                      </Link>
+                      {token ? (
+                        <button
+                          onClick={logout}
+                          className="hover:text-black text-left"
+                        >
+                          Logout
+                        </button>
+                      ) : (
+                        <>
+                          <Link
+                            to="/login"
+                            className="hover:text-black"
+                            onClick={() => setDropDown(false)}
+                          >
+                            Login
+                          </Link>
+                          <Link
+                            to="/signup"
+                            className="hover:text-black"
+                            onClick={() => setDropDown(false)}
+                          >
+                            Signup
+                          </Link>
+                        </>
+                      )}
                     </div>
                   </div>
                 )}
