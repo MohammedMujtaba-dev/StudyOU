@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Card = ({ name, img, pdfLink, semester, type, description }) => {
   const handleAccess = (action) => {
+    const navigate = useNavigate();
     const token = localStorage.getItem("token");
     if (!token) {
+      navigate("/login");
       toast.error("Please login to access this content.");
       return;
     }
