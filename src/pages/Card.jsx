@@ -50,3 +50,5 @@ const Card = ({ name, img, pdfLink, semester, type, description }) => {
     </div>
   );
 };
+
+export default Card;
