@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { assets, Material } from "../assets/assets";
-import Card from "./Card";
+import Card from "./Card.jsx";
 
 const StudyMaterials = () => {
   const [products, setProducts] = useState([]);
