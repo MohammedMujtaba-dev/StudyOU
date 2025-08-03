@@ -6,8 +6,8 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col sm:flex-row justify-evenly sm:items-center items-start  mt-25 bg-gray-50 px-8 py-14">
-        <div className="text-3xl sm:text-4xl mb-10 sm:mb-0">
+      <div className="flex flex-col sm:flex-row justify-evenly sm:items-center items-start  sm:gap-0 gap-10 mt-25 bg-gray-50 px-8 py-14">
+        <div className="text-3xl sm:text-4xl ">
           <l className="bg-blue-400 font-bold p-1.5 pt-2 rounded-3xl ">
             Study
             <b className="bg-black ml-0.5 px-2 text-white rounded-3xl">OU</b>
@@ -53,7 +53,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className=" sm:mb-0 text-base sm:text-lg">
+        <div className=" sm:mb-0 text-base sm:text-lg mt-[-3.5rem]">
           <ul className="flex flex-col gap-3">
             <p className="text-base sm:text-xl text-gray-500">Contact -</p>
             <li className="text-gray-500 hover:text-gray-900 flex items-center gap-2">
@@ -68,9 +68,7 @@ const Footer = () => {
             </li>
             <li className="text-gray-500 hover:text-gray-900 sm:text-lg text-sm flex items-center gap-2">
               <MdEmail />
-              <a href="mailto:mohdmujtabawork706@gmail.com">
-                mohdmujtabawork706@gmail.com
-              </a>
+              <a href="mailto:mohdmujtabawork706@gmail.com">Mail</a>
             </li>
           </ul>
         </div>
