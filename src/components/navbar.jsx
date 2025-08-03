@@ -11,7 +11,7 @@ const Navbar = () => {
   const logout = () => {
     localStorage.removeItem("token");
     setDropDown(false);
-    window.location.href = "/login"; // optional: redirect to login page
+    window.location.href = "/StudyOU/login"; // optional: redirect to login page
   };
 
   useEffect(() => {
